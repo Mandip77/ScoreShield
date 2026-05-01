@@ -2,7 +2,6 @@ import { NextRequest, NextResponse } from "next/server";
 
 const PROTECTED_PREFIXES = ["/dashboard", "/tenants", "/billing"];
 
-// Auth.js v5 stores the session token in one of these cookies depending on the protocol
 function getSessionToken(req: NextRequest): string | undefined {
   return (
     req.cookies.get("authjs.session-token")?.value ??
